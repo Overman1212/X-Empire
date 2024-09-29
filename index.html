@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X Empire Aidrop All YouTube Task Codes</title>
+    <!-- Embedded CSS -->
+    <style>
+        /* CSS Variables for Color Scheme */
+        :root {
+            --color-dominant: #000000; /* 60% Black */
+            --color-secondary: #007BFF; /* 30% Blue */
+            --color-accent: #FFFFFF; /* 10% White */
+            --background-color: var(--color-dominant);
+            --text-color: var(--color-accent);
+            --button-background: var(--color-secondary);
+            --button-hover: #0056b3; /* Darker shade of blue for hover */
+            --input-background: #1a1a1a;
+            --input-border: #333333;
+            --task-background: #1a1a1a;
+            --task-border: #333333;
+            --task-hover: #2a2a2a;
+        }
+
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        /* Logo Styling */
+        .aidrop-logo {
+            width: 80px; /* Initial size */
+            height: 80px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+
+        .aidrop-logo:hover {
+            transform: scale(1.1); /* Slight zoom on hover */
+        }
+
+        /* Heading Styling */
+        h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 24px;
+            color: var(--text-color);
+        }
+
+        /* Search Input Styling */
+        #searchInput {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border: 1px solid var(--input-border);
+            border-radius: 4px;
+            background-color: var(--input-background);
+            color: var(--text-color);
+            box-sizing: border-box;
+        }
+
+        #searchInput::placeholder {
+            color: #cccccc;
+        }
+
+        /* Task List Styling */
+        #taskList {
+            list-style-type: none;
+            padding: 0;
+            max-height: 500px; /* Optional: Set max height for scroll */
+            overflow-y: auto;
+        }
+
+        #taskList li {
+            padding: 10px;
+            border: 1px solid var(--task-border);
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 4px;
+            background-color: var(--task-background);
+            transition: background-color 0.3s;
+        }
+
+        #taskList li:hover {
+            background-color: var(--task-hover);
+        }
+
+        /* Copy Button Styling */
+        .copy-button {
+            padding: 5px 10px;
+            background-color: var(--button-background);
+            color: var(--color-accent);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 14px;
+        }
+
+        .copy-button:hover {
+            background-color: var(--button-hover);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 600px) {
+            .aidrop-logo {
+                width: 100px;
+                height: 100px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            #searchInput {
+                font-size: 18px;
+            }
+
+            .copy-button {
+                font-size: 16px;
+            }
+        }
+
+        /* Notification Styling */
+        .copy-notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--color-dominant);
+            color: var(--color-accent);
+            padding: 10px 20px;
+            border: 1px solid var(--task-border);
+            border-radius: 5px;
+            opacity: 0.9;
+            transition: opacity 0.5s;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <!-- SVG Logo -->
+        <svg class="aidrop-logo" width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Aidrop Logo" title="Aidrop Logo">
+            <defs>
+                <linearGradient id="xGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="60%" style="stop-color:var(--color-dominant); stop-opacity:1" />
+                    <stop offset="90%" style="stop-color:var(--color-secondary); stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:var(--color-accent); stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <!-- First diagonal line -->
+            <line x1="10" y1="10" x2="90" y2="90" stroke="url(#xGradient)" stroke-width="15" stroke-linecap="round"/>
+            <!-- Second diagonal line -->
+            <line x1="90" y1="10" x2="10" y2="90" stroke="url(#xGradient)" stroke-width="15" stroke-linecap="round"/>
+        </svg>
+
+        <!-- Main Heading -->
+        <h1>X Empire Aidrop All YouTube Task Codes</h1>
+    </header>
+
+    <!-- Search Input -->
+    <input type="text" id="searchInput" placeholder="Search for tasks..." onkeyup="searchTasks()">
+
+    <!-- Task List -->
+    <ul id="taskList">
+        <!-- Tasks will be dynamically inserted here -->
+    </ul>
+
+    <!-- Notification Container -->
+    <div id="notificationContainer"></div>
+
+    <!-- Embedded JavaScript -->
+    <script>
+        // Array of task objects
+        const tasks = [
+            { name: "Episode 1", code: "45666" },
+            { name: "Episode 2", code: "65755" },
+            { name: "Episode 3", code: "97025" },
+            { name: "Episode 4", code: "77375" },
+            { name: "Episode 5", code: "36487" },
+            { name: "Episode 6", code: "57624" },
+            { name: "Episode 7", code: "37519" },
+            { name: "Episode 8", code: "35489" },
+            { name: "Episode 9", code: "28139" },
+            { name: "Episode 10", code: "28210" },
+            { name: "Without episode", code: "1" },
+            { name: "Episode 11", code: "29711" },
+            { name: "Episode 12", code: "30712" },
+            { name: "Episode 13", code: "32813" },
+            { name: "Episode 14", code: "37814" },
+            { name: "Episode 15", code: "39915" },
+            { name: "Episode 16", code: "33016" },
+            { name: "Episode 17", code: "34117" },
+            { name: "Episode Vitalika Buterina", code: "6" },
+            { name: "Episode 18", code: "35218" },
+            { name: "Episide 19", code: "36319" },
+            { name: "Episode 20", code: "36319" },
+            { name: "Episode 21", code: "37121" },
+            { name: "Episode 22", code: "37422" },
+            { name: "Episode 23", code: "38923" },
+            { name: "Episode 24", code: "39024" },
+            { name: "Video Pavel Durov", code: "35" },
+            { name: "Episode 25", code: "34425" },
+            { name: "Trump", code: "2007" },
+            { name: "Episode 26", code: "39326" },
+            { name: "Episode 27", code: "35527" },
+            { name: "Episode 28", code: "75928" },
+            { name: "Phenomenon Bezos", code: "0" },
+            { name: "Episode 29", code: "34329" },
+            { name: "Episode 30", code: "64930" },
+            { name: "Episode 31", code: "61931" },
+            { name: "Episode 32", code: "12932" },
+            { name: "Episode 33", code: "86133" },
+            { name: "Warren Buffets", code: "1958" },
+            { name: "Episode 34", code: "48134" },
+            { name: "Episode 35", code: "15235" },
+            { name: "Episode 36", code: "93136" },
+            { name: "Episode 37", code: "72837" },
+            { name: "Episode 38", code: "22938" },
+            { name: "Episode 39", code: "44139" },
+            { name: "Episode 40", code: "65340" },
+            { name: "Sam Altman", code: "2023" },
+            { name: "Airpdrop wallet", code: "3" },
+            { name: "Episode 41", code: "10941" },
+            { name: "Episode 42", code: "83242" },
+            { name: "Episode 43", code: "87843" },
+            { name: "Episode 44", code: "62944" },
+            { name: "Mark Zuckerberg", code: "2011" },
+            { name: "Episode 45", code: "23745" },
+            { name: "Episode 46", code: "83946" },
+            { name: "Episode 47", code: "24147" },
+            { name: "Episode 48", code: "26148" },
+            { name: "Episode 49", code: "52649" },
+            { name: "Episode 50", code: "89350" },
+            { name: "Steve Jobs", code: "1989" },
+            { name: "Episode 51", code: "37251" },
+            { name: "Episode 52", code: "61152" },
+            { name: "Create your avatar", code: "10" },
+            { name: "Episode 53", code: "19953" },
+            { name: "Episode 54", code: "10954" },
+            { name: "Episode 55", code: "71755" }
+        ];
+
+        // Function to initialize the task list
+        function initTaskList() {
+            const taskList = document.getElementById('taskList');
+
+            tasks.forEach(task => {
+                const li = document.createElement('li');
+
+                // Create task name and code span
+                const taskInfo = document.createElement('span');
+                taskInfo.textContent = `${task.name} - ${task.code}`;
+
+                // Create copy button
+                const copyBtn = document.createElement('button');
+                copyBtn.textContent = "Copy";
+                copyBtn.className = "copy-button";
+                copyBtn.onclick = () => copyToClipboard(task.code);
+
+                // Append to list item
+                li.appendChild(taskInfo);
+                li.appendChild(copyBtn);
+
+                // Append list item to task list
+                taskList.appendChild(li);
+            });
+        }
+
+        // Function to copy text to clipboard and show notification
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showCopyNotification(`Copied: ${text}`);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+
+        // Function to show copy notification
+        function showCopyNotification(message) {
+            const notificationContainer = document.getElementById('notificationContainer');
+            const notification = document.createElement('div');
+            notification.className = 'copy-notification';
+            notification.textContent = message;
+            notificationContainer.appendChild(notification);
+
+            // Remove notification after 2 seconds
+            setTimeout(() => {
+                notification.remove();
+            }, 2000);
+        }
+
+        // Function to search tasks
+        function searchTasks() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const taskList = document.getElementById('taskList');
+            const tasks = taskList.getElementsByTagName('li');
+
+            for (let i = 0; i < tasks.length; i++) {
+                const task = tasks[i].getElementsByTagName('span')[0].textContent.toLowerCase();
+                if (task.includes(input)) {
+                    tasks[i].style.display = "";
+                } else {
+                    tasks[i].style.display = "none";
+                }
+            }
+        }
+
+        // Initialize the task list when the page loads
+        window.onload = initTaskList;
+    </script>
+</body>
+      </html>
